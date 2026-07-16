@@ -1,0 +1,67 @@
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.tabs {
+  margin-bottom: 16px;
+}
+
+.tabs button {
+  padding: 8px 16px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background: #333;
+  color: white;
+  border-color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+th:not(:first-child):not(:nth-child(2)),
+td:not(:first-child):not(:nth-child(2)) {
+  white-space: nowrap;
+}
+
+.rank {
+  color: #f0a020;
+  font-weight: bold;
+  width: 24px;
+}
+
+td.info {
+  max-width: 320px;
+}
+
+.title {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.platform-name {
+  color: #888;
+  font-size: 0.85em;
+}
