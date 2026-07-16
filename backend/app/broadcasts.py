@@ -2,7 +2,7 @@ from datetime import datetime
 
 import httpx
 
-from app.category_map import LB_CATEGORY_NAMES
+from app.category_map import resolve_lb_category
 from app.platform_names import PLATFORM_NAMES
 
 SOURCE_URL = "https://live.ecomm-data.com/api/assignment/list"
@@ -21,7 +21,7 @@ def _normalize_lb(item: dict) -> dict:
         "id": item["objectID"],
         "platform_name": PLATFORM_NAMES.get(item["platform_id"], item["platform_id"]),
         "title": item["title"],
-        "category": LB_CATEGORY_NAMES.get(item["cid"]),
+        "category": resolve_lb_category(item.get("cid")),
         "datetime_start": _format_datetime(item["datetime_start"]),
         "product_cnt": item["product_cnt"],
         "visit_cnt": item["visit_cnt"],
